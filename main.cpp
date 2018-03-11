@@ -3,6 +3,7 @@
 #include <ctime>
 #include <string>
 using namespace std;
+
 void pt(string name){
 for (int i = 0;i<3;i++) {
 		cout << name << "'s turn.";
@@ -21,6 +22,7 @@ int main() {
 	int a = 0, x, y, rotation, le = 0, prov = 0, win = 0, win1 = 0;
 	bool turn = 0;
 	string player1, player2;
+
 	string A0[n*n], A01[n*n], A[n*n], A1[n*n];
 	for (int i = 0;i < n*n;i++) {
 		A[i] = " ";     //field01
@@ -78,6 +80,7 @@ int main() {
 		cin >> a;
 		system("cls");
 	}
+
 	for (int g = 0;g < 6;g++) {
 		if (g != 5) {
 			for (int i = n - 1;i >= 0;i--) {
@@ -387,10 +390,12 @@ int main() {
 			cout << " |";
 			for (int j = 0;j < n;j++) {
 				cout << j<<"|";
+
 			}
 			cout << endl;
 			cout << "Now you need to hit your opponent's ships!Y and X mustn't be smaller than 0 or bigger, than 9!" << endl;
 			cout << "If you don't follow the instruction, your turn will end and it will be your opponent's turn!" << endl;
+
 			cout << "Enter positions(x,y): ";
 			cin >> x >> y;
 			if (A1[x + (y * 10)] == "1") {
@@ -404,10 +409,12 @@ int main() {
                 A01[x + (y * 10)] = "O";
                 }
 				turn = 1;
+
 			}
 			system("cls");
 		}
 		else {
+
 			pt(player2);
 			le = 0;
 			for (int i = n - 1;i >= 0;i--) {
@@ -425,10 +432,12 @@ int main() {
 			cout << " |";
 			for (int j = 0;j < n;j++) {
 				cout << j<<"|";
+
 			}
 			cout << endl;
 			cout << "Now you need to hit your opponent's ships!Y and X mustn't be smaller than 0 or bigger, than 9!" << endl;
 			cout << "If you don't follow the instruction, your turn will end and it will be your opponent's turn!" << endl;
+
 			cout << "Enter positions(x,y): ";
 			cin >> x >> y;
 			if (A[x + (y * 10)] == "1") {
@@ -452,6 +461,7 @@ int main() {
 	if (win == 14) {
 		cout << "Congratulations, " << player1 << ",you won the round!";
 	}
+
 }
 
 
